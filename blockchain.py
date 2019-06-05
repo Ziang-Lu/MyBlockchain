@@ -63,7 +63,7 @@ class BlockChain:
 
         index = len(self._chain)
         prev_hash = self._chain[-1].hash
-        transaction = self.gen_transaction()
+        transaction = self._gen_transaction()
         # Let the miners start mining
         processes = []
         result_q = Queue()
