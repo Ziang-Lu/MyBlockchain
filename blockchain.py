@@ -27,9 +27,9 @@ class BlockChain:
     # two valid blocks.
 
     @staticmethod
-    def gen_transaction() -> str:
+    def _gen_transaction() -> str:
         """
-        Randomly generates a transaction.
+        Private helper method to randomly generates a transaction.
         :return: str
         """
         transaction = {
