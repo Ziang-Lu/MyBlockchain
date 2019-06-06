@@ -51,7 +51,7 @@ class BlockChain:
 
     def gen_block(self, genesis=False) -> None:
         """
-        Generates the next block.
+        Generates the next block and adds it to the chain.
         :param genesis: bool
         :return: None
         """
