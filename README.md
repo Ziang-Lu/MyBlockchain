@@ -33,6 +33,12 @@ Blockchain是一个优美的distrbuted DB, 使得<u>互相不信任的个体</u>
 
 <br>
 
+## 架构设计
+
+Check out this great article: https://blog.csdn.net/hui_yong/article/details/81111088
+
+<br>
+
 ## License
 
 This repo is distributed under the <a href="https://github.com/Ziang-Lu/MyBlockchain/blob/master/LICENSE">MIT license</a>.
