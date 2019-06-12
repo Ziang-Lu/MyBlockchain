@@ -1,4 +1,4 @@
-# Blockchain Simple Implementation
+This repo implements a simple blockchain.
 
 ## Blockchain的哲学意义
 
