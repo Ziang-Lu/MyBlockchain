@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Block definition module.
+Miner definition module.
 """
 
 __author__ = 'Ziang Lu'
@@ -32,8 +32,8 @@ class Miner:
                 return False
         return True
 
-    def mine(self, index: int, prev_hash: str, data: list,
-             difficulty: int, q: Queue) -> None:
+    def mine(self, index: int, prev_hash: str, data: list, difficulty: int,
+             q: Queue) -> None:
         """
         Mines a block at the given index of the given difficulty.
         :param index: int

@@ -56,7 +56,7 @@ class BlockChain:
         :return: None
         """
         if genesis:
-            genesis_block = Block(index=0, prev_hash='0', data=[])
+            genesis_block = Block(prev_hash='0', data=[])
             genesis_block.hash_block()
             self._chain.append(genesis_block)
             return
