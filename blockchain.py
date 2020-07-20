@@ -29,7 +29,7 @@ class BlockChain:
     @staticmethod
     def _gen_transaction() -> str:
         """
-        Private helper method to randomly generates a transaction.
+        Private static helper method to randomly generates a transaction.
         :return: str
         """
         transaction = {
@@ -57,11 +57,10 @@ class BlockChain:
         """
         if genesis:
             genesis_block = Block(prev_hash='0', data=[])
-            genesis_block.hash_block()
+            genesis_block.hash_block(nonce=random.randint(0, 99999))
             self._chain.append(genesis_block)
             return
 
-        index = len(self._chain)
         prev_hash = self._chain[-1].hash
         transaction = self._gen_transaction()
         # Let the miners start mining
@@ -71,7 +70,7 @@ class BlockChain:
             th = Process(
                 target=miner.mine,
                 args=(
-                    index, prev_hash, [transaction], self._DIFFICULTY, result_q
+                    prev_hash, [transaction], self._DIFFICULTY, result_q
                 )
             )
             processes.append(th)
@@ -82,7 +81,7 @@ class BlockChain:
 
         new_block = result_q.get(block=False)
         self._chain.append(new_block)
-        print(new_block)
+        new_block.print_block()
 
 
 if __name__ == '__main__':

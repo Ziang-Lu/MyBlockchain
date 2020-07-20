@@ -8,7 +8,7 @@ Block definition module.
 __author__ = 'Ziang Lu'
 
 import hashlib
-import json
+import pprint
 from datetime import datetime
 
 from typing import Any
@@ -58,3 +58,15 @@ class Block:
         :return: str
         """
         return self._hash
+
+    def print_block(self) -> None:
+        """
+        Prints this block.
+        :return: None
+        """
+        pprint.pprint({
+            'prev_hash': self._prev_hash,
+            'data': self._data,
+            'timestamp': self._timestamp,
+            'hash': self._hash
+        })
